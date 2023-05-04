@@ -1,15 +1,18 @@
 import torch
 
 import flash
-from flash.image import ImageClassificationData, ImageClassificationInputTransform, ImageClassifier
+from flash.image import ImageClassificationData, ImageClassifier
+
+# Custom imports
+from transforms import ISICInputTransform
 
 # 1. Create the DataModule
 datamodule = ImageClassificationData.from_folders(
     train_folder="/home/kti03/Data/ISIC2018/train",
     val_folder="/home/kti03/Data/ISIC2018/val",
-    batch_size=128,
-    num_workers=16,
-    transform=ImageClassificationInputTransform(image_size=(224, 224)),
+    batch_size=64,
+    num_workers=12,
+    transform=ISICInputTransform(),
 )
 
 # 2. Build the task

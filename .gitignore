@@ -1,6 +1,7 @@
 # Folders
 .vscode/
 lightning_logs/
+__pycache__/
 
 # File types
 *.pt

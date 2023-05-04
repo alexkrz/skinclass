@@ -16,4 +16,5 @@ dependencies:
     - torchmetrics==0.10.*
     - lightning-flash[image]==0.8.1
     - pandas==2.0.*
+    - matplotlib==3.7.*
    
