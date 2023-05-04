@@ -1,0 +1,19 @@
+name: skinclass
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - pip
+  - python=3.9.*
+  - pytorch=1.11.*
+  - torchvision=0.12.*
+  - cudatoolkit=11.3.*
+  - pip:
+    - black==23.3.*
+    - tensorboard==2.10.*
+    - pytorch-lightning==1.9.0
+    - torchmetrics==0.10.*
+    - lightning-flash[image]==0.8.1
+    - pandas==2.0.*
+   

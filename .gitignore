@@ -1,0 +1,6 @@
+# Folders
+.vscode/
+lightning_logs/
+
+# File types
+*.pt
