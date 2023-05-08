@@ -24,7 +24,7 @@ class ISICInputTransform(InputTransform):
                     T.Compose(
                         [
                             T.ToTensor(),
-                            T.RandomCrop(min(self.org_img_size)),
+                            T.CenterCrop(min(self.org_img_size)),
                             T.Resize(self.input_img_size),
                             T.Normalize(self.mean, self.std),
                         ],

@@ -25,11 +25,13 @@ trainer.finetune(model, datamodule=datamodule, strategy="freeze")
 # 4. Predict what's on a few images! ants or bees?
 datamodule = ImageClassificationData.from_files(
     predict_files=[
-        "/home/kti03/Data/ISIC2018/test_images/ISIC_0034524.jpg",
-        "/home/kti03/Data/ISIC2018/test_images/ISIC_0034525.jpg",
-        "/home/kti03/Data/ISIC2018/test_images/ISIC_0034526.jpg",
+        "/home/kti03/Data/ISIC2018/test/MEL/ISIC_0034529.jpg",
+        "/home/kti03/Data/ISIC2018/test/MEL/ISIC_0034548.jpg",
+        "/home/kti03/Data/ISIC2018/test/MEL/ISIC_0034572.jpg",
     ],
     batch_size=3,
+    num_workers=12,
+    transform=ISICInputTransform(),
 )
 predictions = trainer.predict(model, datamodule=datamodule, output="labels")
 print(predictions)

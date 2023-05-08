@@ -6,15 +6,16 @@ channels:
 dependencies:
   - pip
   - python=3.9.*
-  - pytorch=1.11.*
-  - torchvision=0.12.*
-  - cudatoolkit=11.3.*
+  - pytorch=1.13.1
+  - torchvision=0.14.1
+  - pytorch-cuda=11.7
   - pip:
     - black==23.3.*
     - tensorboard==2.10.*
+    - torch-tb-profiler==0.4.1
     - pytorch-lightning==1.9.0
     - torchmetrics==0.10.*
+    - pandas==1.5.2
     - lightning-flash[image]==0.8.1
-    - pandas==2.0.*
     - matplotlib==3.7.*
    
