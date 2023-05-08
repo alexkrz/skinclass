@@ -13,7 +13,7 @@ dependencies:
     - black==23.3.*
     - tensorboard==2.10.*
     - torch-tb-profiler==0.4.1
-    - pytorch-lightning==1.9.0
+    - pytorch-lightning==1.8.6
     - torchmetrics==0.10.*
     - pandas==1.5.2
     - lightning-flash[image]==0.8.1
