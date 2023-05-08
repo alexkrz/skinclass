@@ -11,11 +11,11 @@ dependencies:
   - pytorch-cuda=11.7
   - pip:
     - black==23.3.*
-    - tensorboard==2.10.*
+    - tensorboard==2.11.*  # Before requiring glibc > 2.31
     - torch-tb-profiler==0.4.1
-    - pytorch-lightning==1.8.6
+    - pytorch-lightning==1.8.6  # Before switching from LightningLite to Fabric
     - torchmetrics==0.10.*
-    - pandas==1.5.2
+    - pandas==1.5.2  # Before switching from Numpy to Apache Arrow backend
     - lightning-flash[image]==0.8.1
     - matplotlib==3.7.*
    
