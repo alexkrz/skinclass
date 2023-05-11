@@ -9,3 +9,6 @@ __pycache__/
 # Trained models
 pytorch/*.pt
 pytorch/*.mlmodel
+
+# App models 
+swift/*.mlmodel
