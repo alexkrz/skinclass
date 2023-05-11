@@ -37,4 +37,4 @@ predictions = trainer.predict(model, datamodule=datamodule, output="labels")
 print(predictions)
 
 # 5. Save the model!
-trainer.save_checkpoint("image_classification_model.pt")
+trainer.save_checkpoint("isic_resnet18.pt")
