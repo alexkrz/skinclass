@@ -1,3 +1,6 @@
+# System
+*.DS_Store
+
 # Folders
 .vscode/
 lightning_logs/
