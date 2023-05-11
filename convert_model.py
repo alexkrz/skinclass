@@ -1,6 +1,8 @@
 # Conversion of Pytorch Model to Core ML following
 # https://coremltools.readme.io/docs/convert-a-torchvision-model-from-pytorch
 
+import os
+
 import torch
 import torchvision
 
@@ -25,13 +27,16 @@ datamodule = ImageClassificationData.from_folders(
 # 2. Build the task
 lit_module = ImageClassifier(backbone="resnet18", labels=datamodule.labels)
 
-torch_model = lit_module.load_from_checkpoint("isic_resnet18.pt").backbone
+torch_model = lit_module.load_from_checkpoint("isic_resnet18.pt")
 torch_model.eval()
 
 # Trace the model with random data.
-example_input = torch.rand(1, 3, 640, 480)
-traced_model = torch.jit.trace(torch_model, example_input)
+example_input = torch.rand(1, 3, 224, 224)
+# traced_model = torch.jit.trace(torch_model, example_input)
+# Fix "module not attached to trainer" bug according to https://github.com/Lightning-AI/lightning/issues/14036
+traced_model = torch_model.to_torchscript(method="trace", example_inputs=example_input)
 out = traced_model(example_input)
+assert len(out.reshape(-1)) == len(datamodule.labels)
 
 # Preprocess input for coreml
 scale = 1 / (0.226 * 255.0)
