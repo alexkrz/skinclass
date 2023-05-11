@@ -16,6 +16,7 @@ dependencies:
     - pytorch-lightning==1.8.6  # Before switching from LightningLite to Fabric
     - torchmetrics==0.10.*
     - pandas==1.5.2  # Before switching from Numpy to Apache Arrow backend
+    - scikit-learn==1.1.2  # Maximum supported version in this environment, raised by torchvision
     - lightning-flash[image]==0.8.1
     - matplotlib==3.7.*
     - coremltools==6.3.0
