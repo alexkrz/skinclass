@@ -11,4 +11,4 @@ pytorch/*.pt
 pytorch/*.mlmodel
 
 # App models 
-swift/*.mlmodel
+swift/Models/*.mlmodel
