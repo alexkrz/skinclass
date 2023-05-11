@@ -2,6 +2,7 @@
 # https://coremltools.readme.io/docs/convert-a-torchvision-model-from-pytorch
 
 import os
+from pathlib import Path
 
 import torch
 import torchvision
@@ -15,10 +16,11 @@ from transforms import ISICInputTransform
 # Core ML
 import coremltools as ct
 
+
 # 1. Create the DataModule
 datamodule = ImageClassificationData.from_folders(
-    train_folder="/home/kti03/Data/ISIC2018/train",
-    val_folder="/home/kti03/Data/ISIC2018/val",
+    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train",
+    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val",
     batch_size=64,
     num_workers=12,
     transform=ISICInputTransform(),

@@ -18,10 +18,11 @@ from transforms import ISICInputTransform
 # Core ML
 import coremltools as ct
 
+
 # 1. Create the DataModule
 datamodule = ImageClassificationData.from_folders(
-    train_folder="/home/kti03/Data/ISIC2018/train",
-    val_folder="/home/kti03/Data/ISIC2018/val",
+    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train",
+    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val",
     batch_size=64,
     num_workers=12,
     transform=ISICInputTransform(),
@@ -40,7 +41,7 @@ out = traced_model(example_input)
 print(out.reshape(-1))
 
 # Load the test image and resize to 224, 224.
-img_path = Path("/home/kti03/Data/ISIC2018/test/MEL/ISIC_0034529.jpg")
+img_path = Path(os.environ["ISIC_DATA_PATH"]) / "test" / "MEL" / "ISIC_0034529.jpg"
 org_img = PIL.Image.open(img_path)
 pil_transforms = T.Compose(
     [
@@ -57,6 +58,8 @@ torch_transforms = T.Compose(
     ],
 )
 img = pil_transforms(org_img)
+# plt.imshow(img)
+# plt.show()
 
 # Invoke prediction and print outputs.
 torch_out = traced_model(torch_transforms(org_img).unsqueeze(0))
@@ -71,6 +74,7 @@ for i in range(3):
     print("class name: {}, raw score value: {}".format(class_id, score_value))
 
 
+# Load Core ML Model
 mlmodel = ct.models.MLModel("isic_resnet18.mlmodel")
 
 # Get the protobuf spec of the model.
