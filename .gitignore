@@ -3,6 +3,6 @@
 lightning_logs/
 __pycache__/
 
-# File types
-*.pt
-*.mlmodel
+# Trained models
+pytorch/*.pt
+pytorch/*.mlmodel
