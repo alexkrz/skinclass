@@ -19,8 +19,8 @@ import coremltools as ct
 
 # 1. Create the DataModule
 datamodule = ImageClassificationData.from_folders(
-    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train",
-    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val",
+    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train_mel_nev",
+    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val_mel_nev",
     batch_size=64,
     num_workers=12,
     transform=ISICInputTransform(),
@@ -29,7 +29,7 @@ datamodule = ImageClassificationData.from_folders(
 # 2. Build the task
 lit_module = ImageClassifier(backbone="resnet18", labels=datamodule.labels)
 
-torch_model = lit_module.load_from_checkpoint("isic_resnet18.pt")
+torch_model = lit_module.load_from_checkpoint("isic_resnet18_2cl.pt")
 torch_model.eval()
 
 # Trace the model with random data.
@@ -56,6 +56,6 @@ model = ct.convert(
 )
 
 # Save the converted model.
-model.save("isic_resnet18.mlmodel")
+model.save("isic_resnet18_2cl.mlmodel")
 # Print a confirmation message.
 print("model converted and saved")

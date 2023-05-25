@@ -12,8 +12,8 @@ from transforms import ISICInputTransform
 
 # 1. Create the DataModule
 datamodule = ImageClassificationData.from_folders(
-    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train",
-    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val",
+    train_folder=Path(os.environ["ISIC_DATA_PATH"]) / "train_mel_nev",
+    val_folder=Path(os.environ["ISIC_DATA_PATH"]) / "val_mel_nev",
     batch_size=64,
     num_workers=12,
     transform=ISICInputTransform(),
@@ -29,9 +29,9 @@ trainer.finetune(model, datamodule=datamodule, strategy="freeze")
 # 4. Predict what's on a few images! ants or bees?
 datamodule = ImageClassificationData.from_files(
     predict_files=[
-        Path(os.environ["ISIC_DATA_PATH"]) / "test" / "MEL" / "ISIC_0034529.jpg",
-        Path(os.environ["ISIC_DATA_PATH"]) / "test" / "MEL" / "ISIC_0034548.jpg",
-        Path(os.environ["ISIC_DATA_PATH"]) / "test" / "MEL" / "ISIC_0034572.jpg",
+        Path(os.environ["ISIC_DATA_PATH"]) / "test_mel_nev" / "melanoma" / "ISIC_0034529.jpg",
+        Path(os.environ["ISIC_DATA_PATH"]) / "test_mel_nev" / "melanoma" / "ISIC_0034548.jpg",
+        Path(os.environ["ISIC_DATA_PATH"]) / "test_mel_nev" / "melanoma" / "ISIC_0034572.jpg",
     ],
     batch_size=3,
     num_workers=12,
@@ -41,4 +41,4 @@ predictions = trainer.predict(model, datamodule=datamodule, output="labels")
 print(predictions)
 
 # 5. Save the model!
-trainer.save_checkpoint("isic_resnet18.pt")
+trainer.save_checkpoint("isic_resnet18_2cl.pt")
