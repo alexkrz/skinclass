@@ -11,7 +11,7 @@
 		11063F641EC0EECC0033EE6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11063F631EC0EECC0033EE6D /* MainViewController.swift */; };
 		11063F691EC0EECC0033EE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11063F681EC0EECC0033EE6D /* Assets.xcassets */; };
 		11063F741EC0F5270033EE6D /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11063F731EC0F5270033EE6D /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
-		11712ABF2A1FB7D800E7C316 /* isic_resnet18_2cl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11712ABE2A1FB7D800E7C316 /* isic_resnet18_2cl.mlmodel */; };
+		11F7CB6C2A2D06F60095E307 /* isic_resnet18_2cl.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 11F7CB6B2A2D06F50095E307 /* isic_resnet18_2cl.mlmodel */; };
 		EB6D4EB126BA58FC00DCF755 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EB6D4EAF26BA58FC00DCF755 /* MobileNet.mlmodel */; };
 		EB6D4EB526BA5A0000DCF755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6D4EB326BA5A0000DCF755 /* LaunchScreen.storyboard */; };
 		EB6D4EBA26BA5A2F00DCF755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB6D4EB826BA5A2F00DCF755 /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 		11063F681EC0EECC0033EE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11063F6D1EC0EECC0033EE6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11063F731EC0F5270033EE6D /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
-		11712ABE2A1FB7D800E7C316 /* isic_resnet18_2cl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = isic_resnet18_2cl.mlmodel; sourceTree = "<group>"; };
+		11F7CB6B2A2D06F50095E307 /* isic_resnet18_2cl.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = isic_resnet18_2cl.mlmodel; sourceTree = "<group>"; };
 		7A862B3053580E92D52AA6E3 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		83D09BCE84BD8F0B0100E8B3 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C858E5CC1ECA99CC006C5CAA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		EB6D4EAD26BA56E500DCF755 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				11712ABE2A1FB7D800E7C316 /* isic_resnet18_2cl.mlmodel */,
+				11F7CB6B2A2D06F50095E307 /* isic_resnet18_2cl.mlmodel */,
 				EB6D4EAF26BA58FC00DCF755 /* MobileNet.mlmodel */,
 			);
 			path = Models;
@@ -221,7 +221,7 @@
 				11063F621EC0EECC0033EE6D /* AppDelegate.swift in Sources */,
 				EB9D7ECE26C2D78300039949 /* ImagePredictor.swift in Sources */,
 				EB9D7ECC26C2D5F800039949 /* MainViewController+CameraPicker.swift in Sources */,
-				11712ABF2A1FB7D800E7C316 /* isic_resnet18_2cl.mlmodel in Sources */,
+				11F7CB6C2A2D06F60095E307 /* isic_resnet18_2cl.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +373,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C4MH8WRQ6N;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -395,7 +395,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = C4MH8WRQ6N;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
