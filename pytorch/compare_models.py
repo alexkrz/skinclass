@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 
 import torch
+import torch.nn as nn
 import torchvision
 import torchvision.transforms as T
 
@@ -32,6 +33,8 @@ datamodule = ImageClassificationData.from_folders(
 lit_module = ImageClassifier(backbone="resnet18", labels=datamodule.labels)
 
 torch_model = lit_module.load_from_checkpoint("isic_resnet18_2cl.pt")
+# Add softmax layer to return normalized confidence values
+torch_model.adapter.head = nn.Sequential(torch_model.adapter.head, nn.Softmax(dim=1))
 torch_model.eval()
 
 # Trace the model with random data.
