@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-               BuildableName = "MelNev Classifier.app"
+               BuildableName = "MelNevClassifier.app"
                BlueprintName = "MelNevClassifier"
                ReferencedContainer = "container:MelNevClassifier.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-            BuildableName = "MelNev Classifier.app"
+            BuildableName = "MelNevClassifier.app"
             BlueprintName = "MelNevClassifier"
             ReferencedContainer = "container:MelNevClassifier.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-            BuildableName = "MelNev Classifier.app"
+            BuildableName = "MelNevClassifier.app"
             BlueprintName = "MelNevClassifier"
             ReferencedContainer = "container:MelNevClassifier.xcodeproj">
          </BuildableReference>
