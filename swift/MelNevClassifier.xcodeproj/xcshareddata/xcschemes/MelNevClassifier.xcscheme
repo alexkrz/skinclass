@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-               BuildableName = "Vision + CoreML.app"
-               BlueprintName = "Vision + CoreML"
+               BuildableName = "MelNev Classifier.app"
+               BlueprintName = "MelNevClassifier"
                ReferencedContainer = "container:MelNevClassifier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-            BuildableName = "Vision + CoreML.app"
-            BlueprintName = "Vision + CoreML"
+            BuildableName = "MelNev Classifier.app"
+            BlueprintName = "MelNevClassifier"
             ReferencedContainer = "container:MelNevClassifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "11063F5D1EC0EECC0033EE6D"
-            BuildableName = "Vision + CoreML.app"
-            BlueprintName = "Vision + CoreML"
+            BuildableName = "MelNev Classifier.app"
+            BlueprintName = "MelNevClassifier"
             ReferencedContainer = "container:MelNevClassifier.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

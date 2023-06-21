@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11063F5E1EC0EECC0033EE6D /* MelNev Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MelNev Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11063F5E1EC0EECC0033EE6D /* MelNevClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MelNevClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11063F611EC0EECC0033EE6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11063F631EC0EECC0033EE6D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		11063F681EC0EECC0033EE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		11063F5F1EC0EECC0033EE6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11063F5E1EC0EECC0033EE6D /* MelNev Classifier.app */,
+				11063F5E1EC0EECC0033EE6D /* MelNevClassifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11063F5D1EC0EECC0033EE6D /* Vision + CoreML */ = {
+		11063F5D1EC0EECC0033EE6D /* MelNevClassifier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11063F701EC0EECC0033EE6D /* Build configuration list for PBXNativeTarget "Vision + CoreML" */;
+			buildConfigurationList = 11063F701EC0EECC0033EE6D /* Build configuration list for PBXNativeTarget "MelNevClassifier" */;
 			buildPhases = (
 				11063F5A1EC0EECC0033EE6D /* Sources */,
 				11063F5B1EC0EECC0033EE6D /* Frameworks */,
@@ -154,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = "Vision + CoreML";
+			name = MelNevClassifier;
 			productName = "Vision+ML Example";
-			productReference = 11063F5E1EC0EECC0033EE6D /* MelNev Classifier.app */;
+			productReference = 11063F5E1EC0EECC0033EE6D /* MelNevClassifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +190,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11063F5D1EC0EECC0033EE6D /* Vision + CoreML */,
+				11063F5D1EC0EECC0033EE6D /* MelNevClassifier */,
 			);
 		};
 /* End PBXProject section */
@@ -380,7 +380,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Vision-Core-ML${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "MelNev Classifier";
+				PRODUCT_NAME = MelNevClassifier;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Vision-Core-ML${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "MelNev Classifier";
+				PRODUCT_NAME = MelNevClassifier;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11063F701EC0EECC0033EE6D /* Build configuration list for PBXNativeTarget "Vision + CoreML" */ = {
+		11063F701EC0EECC0033EE6D /* Build configuration list for PBXNativeTarget "MelNevClassifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11063F711EC0EECC0033EE6D /* Debug */,
